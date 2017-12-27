@@ -1,0 +1,35 @@
+Options +FollowSymLinks +ExecCGI
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+#php_value xdebug.remote_log /home/alexander.kirilov/xdebug/xdebugAction.log
+php_value xdebug.remote_enable 1
+php_value xdebug.remote_autostart 1
+php_value xdebug.idekey alexander.kirilov
+
+php_value xdebug.remote_host 192.168.15.211
+php_value xdebug.remote_port 9000
+
+#php_value xdebug.profiler_enable 0
+#php_value xdebug.profiler_enable_trigger 1
+#php_value xdebug.profiler_append 0
+#php_value xdebug.profiler_output_dir /home/alexander.kirilov/xdebug
+#php_value xdebug.profiler_output_name profiler.out.%R
+#
+#php_value xdebug.trace_enable_trigger 0
+#
+#php_value xdebug.trace_format 0
+#php_value xdebug.show_mem_delta 0
+#php_value xdebug.collect_assignments 0
+#php_value xdebug.collect_params 0
+#php_value xdebug.trace_output_dir /home/alexander.kirilov/xdebug
+#php_value xdebug.trace_output_name trace.out.%R
+
+php_value xdebug.var_display_max_depth -1
+php_value xdebug.var_display_max_children -1
+php_value xdebug.var_display_max_data -1
