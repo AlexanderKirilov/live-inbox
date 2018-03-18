@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Support;
+namespace LiveInbox\Framework\Support;
 
-use Framework\Factory\AdapterFactory;
+use LiveInbox\Framework\Factory\AdapterFactory;
 
 class Helpers {
     /**
